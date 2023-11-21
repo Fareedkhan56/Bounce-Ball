@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90vw;
+    height: 80vh;
+    background-color: blue;
+    position: relative;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: Down 3s linear infinite, Up 1s ease-out infinite alternate;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes Up {
+    from{
+        bottom: 0px;
+    }
+    to{
+        bottom: 70%;
+    }
+}
+@keyframes Down {
+    from{
+        left: 0px;
+    }
+    to{
+        left: 90%;
+    }
+}
